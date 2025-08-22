@@ -1,6 +1,6 @@
 #include "pch.h"
 
-#define ConfigFile ("C:\\Config\\GreedIsBad.ini")
+#define ConfigFile ("D:\\Config\\Abyssus.ini")
 
 void settings::initialize_settings()
 {

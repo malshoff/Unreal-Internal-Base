@@ -125,11 +125,8 @@ DWORD WINAPI MainThread(LPVOID lpReserved)
 	freopen(("CONIN$"), "r", stdin);
 	freopen(("CONOUT$"), "w", stdout);
 	freopen(("CONOUT$"), "w", stderr);
-	
-	if (InitSdk())
-		printf("SDK Inicializada com sucesso! \n");
 
-	_mkdir("C:\\Config");
+	_mkdir("D:\\Config");
 
 	cfg = static_cast<settings*>(malloc(sizeof(settings)));
 	if (!cfg) return 0;

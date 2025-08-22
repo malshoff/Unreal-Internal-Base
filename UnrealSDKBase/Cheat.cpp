@@ -4,7 +4,7 @@ void cheat_manager::cheat_thread()
 {
 	auto& io = ImGui::GetIO();
 
-	gWorld = UWorld::GWorld[0];
+	gWorld = SDK::UWorld::GetWorld();
 	if (!gWorld) return;
 
 	OwningGameInstance = gWorld->OwningGameInstance;
@@ -21,12 +21,12 @@ void cheat_manager::cheat_thread()
 
 	PlayerController->GetViewportSize(&x, &y);
 
-	MyPlayer = PlayerController->K2_GetPawn();
+	MyPlayer = static_cast<SDK::ARPlayerPawn*>(PlayerController->K2_GetPawn());
 	if (!MyPlayer) return;
 
-	TArray<AActor*> Player;
+	SDK::TArray<AActor*> Player;
 
-	UGStatics = (CG::UGameplayStatics*)CG::UGameplayStatics::StaticClass();
+	UGStatics = (SDK::UGameplayStatics*)SDK::UGameplayStatics::StaticClass();
 	if (!UGStatics) return;
 
 	//some games GetAllActorOfClass is STATIC_GetAllActorsOfClass

@@ -22,7 +22,7 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{04B17470-CB82-4724-904B-25445926AB86}</ProjectGuid>
     <RootNamespace>UnrealSDKBase</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -78,12 +78,12 @@
     <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x64;$(LibraryPath)</LibraryPath>
-    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x64;$(LibraryPath)</LibraryPath>
-    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <IncludePath>$(IncludePath)</IncludePath>
     <TargetName>MyDLL</TargetName>
     <OutDir>$(ProjectDir)Build</OutDir>
   </PropertyGroup>
@@ -105,7 +105,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -149,6 +149,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Games\AbyssusHack\AbyssusHack\SDK\Basic.cpp" />
+    <ClCompile Include="..\..\Games\AbyssusHack\AbyssusHack\SDK\BP_EngineRifle_Body_functions.cpp" />
+    <ClCompile Include="..\..\Games\AbyssusHack\AbyssusHack\SDK\BP_EngineRifle_Script_functions.cpp" />
+    <ClCompile Include="..\..\Games\AbyssusHack\AbyssusHack\SDK\CoreUObject_functions.cpp" />
+    <ClCompile Include="..\..\Games\AbyssusHack\AbyssusHack\SDK\Engine_functions.cpp" />
+    <ClCompile Include="..\..\Games\AbyssusHack\AbyssusHack\SDK\RGame_functions.cpp" />
     <ClCompile Include="Cheat.cpp" />
     <ClCompile Include="Drawings.cpp" />
     <ClCompile Include="imgui\imgui.cpp">
@@ -193,10 +199,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pch.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="SDK\BasicTypes_Package.cpp" />
-    <ClCompile Include="SDK\CoreUObject_Package.cpp" />
-    <ClCompile Include="SDK\Engine_Package.cpp" />
-    <ClCompile Include="SDK\Main_Package.cpp" />
     <ClCompile Include="Settings.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -208,6 +210,7 @@
     <ResourceCompile Include="kiero\minhook\dll_resources\MinHook.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Games\AbyssusHack\AbyssusHack\SDK.hpp" />
     <ClInclude Include="Cheat.hpp" />
     <ClInclude Include="Drawings.hpp" />
     <ClInclude Include="imgui\imconfig.h" />
@@ -229,7 +232,6 @@
     <ClInclude Include="kiero\minhook\src\hde\table64.h" />
     <ClInclude Include="kiero\minhook\src\trampoline.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="SDK.h" />
     <ClInclude Include="Menu.hpp" />
     <ClInclude Include="Settings.hpp" />
   </ItemGroup>

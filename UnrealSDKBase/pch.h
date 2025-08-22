@@ -6,7 +6,7 @@
 #include <iostream>
 #include <direct.h>
 
-#include "SDK.h"
+#include "SDK.hpp"
 #include "includes.h"
 #include "Cheat.hpp"
 #include "Menu.hpp"

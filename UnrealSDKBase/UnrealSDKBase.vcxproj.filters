@@ -38,15 +38,6 @@
     <ClCompile Include="kiero\minhook\src\trampoline.c">
       <Filter>hook</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\BasicTypes_Package.cpp">
-      <Filter>SDK</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\Engine_Package.cpp">
-      <Filter>SDK</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\CoreUObject_Package.cpp">
-      <Filter>SDK</Filter>
-    </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>Header</Filter>
     </ClCompile>
@@ -59,11 +50,26 @@
     <ClCompile Include="Settings.cpp">
       <Filter>Settings</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\Main_Package.cpp">
-      <Filter>SDK</Filter>
-    </ClCompile>
     <ClCompile Include="Drawings.cpp">
       <Filter>Cheat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Games\AbyssusHack\AbyssusHack\SDK\Basic.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Games\AbyssusHack\AbyssusHack\SDK\BP_EngineRifle_Body_functions.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Games\AbyssusHack\AbyssusHack\SDK\BP_EngineRifle_Script_functions.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Games\AbyssusHack\AbyssusHack\SDK\RGame_functions.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Games\AbyssusHack\AbyssusHack\SDK\CoreUObject_functions.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Games\AbyssusHack\AbyssusHack\SDK\Engine_functions.cpp">
+      <Filter>SDK</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -118,9 +124,6 @@
     <ClInclude Include="kiero\minhook\src\hde\pstdint.h">
       <Filter>hook</Filter>
     </ClInclude>
-    <ClInclude Include="SDK.h">
-      <Filter>SDK</Filter>
-    </ClInclude>
     <ClInclude Include="includes.h">
       <Filter>Header</Filter>
     </ClInclude>
@@ -138,6 +141,9 @@
     </ClInclude>
     <ClInclude Include="Drawings.hpp">
       <Filter>Cheat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Games\AbyssusHack\AbyssusHack\SDK.hpp">
+      <Filter>SDK</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

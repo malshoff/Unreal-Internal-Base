@@ -1,8 +1,8 @@
-using namespace CG;
+using namespace SDK;
 
 class cheat_manager {
 private:
-	UWorld** _UWorld;
+	SDK::UWorld** _UWorld;
 	UWorld* gWorld;
 	APlayerController* PlayerController;
 	ULocalPlayer* LocalPlayer;
@@ -12,8 +12,8 @@ private:
 	AActor* obj;
 	UGameplayStatics* UGStatics;
 	UKismetSystemLibrary* KismetSystemLib;
-	APawn* MyPlayer;
-	AMyShootCharacter* BaseClass; //change a class for each game
+	ARPlayerPawn* MyPlayer;
+	ACharacter* BaseClass; 
 	UKismetMathLibrary* MathLib;
 	int x, y = 0;
 public:
